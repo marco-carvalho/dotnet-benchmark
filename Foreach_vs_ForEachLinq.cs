@@ -5,7 +5,7 @@
 [RankColumn]
 public class Foreach_vs_ForEachLinq
 {
-    [Params(100, 1_000, 10_000, 100_000)]
+    [Params(100, 1_000, 10_000)]
     public int Size { get; set; }
 
     private List<int> Items;

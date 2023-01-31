@@ -5,7 +5,7 @@
 [RankColumn]
 public class Equals_vs_EqualEqual
 {
-    [Params(100, 1_000, 10_000, 100_000)]
+    [Params(100, 1_000, 10_000)]
     public int Size { get; set; }
 
     [Benchmark]

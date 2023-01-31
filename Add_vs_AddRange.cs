@@ -5,7 +5,7 @@
 [RankColumn]
 public class Add_vs_AddRange
 {
-    [Params(1_000, 10_000, 100_000, 1_000_000)]
+    [Params(100, 1_000, 10_000)]
     public int Size { get; set; }
 
     public class Item
