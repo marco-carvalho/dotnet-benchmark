@@ -1,10 +1,11 @@
 name: Run
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
-  schedule:
-    - cron: '0 * * * *'
 jobs:
   build:
     name: Run
