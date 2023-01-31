@@ -1,0 +1,22 @@
+name: Run
+on:
+  pull_request:
+    branches:
+      - production
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  build:
+    name: Run
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Build
+        run: dotnet run -c Release -f net6.0 net7.0
